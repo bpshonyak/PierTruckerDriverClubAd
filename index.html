@@ -64,115 +64,133 @@
       box-sizing: border-box;
       margin-bottom: 60px;
     }
+    #confirmation {
+      display: none;
+    }
   </style>
+  <script>
+    function onSignUp() {
+      var confirmation = document.getElementById('confirmation')
+      var adContent = document.getElementById('ad-content')
+
+      confirmation.style.display="initial"
+      adContent.style.display="none"
+    }
+  </script>
 </head>
 <body>
   <div class="content-container">
-    <p class="bold padding-bottom">
-      Tired of wasting time and money at the ports?
-    </p>
-    <p class="bold padding-bottom">
-      It's time to make a change... together.
+    <p id="confirmation" class="bold padding-bottom">
+      Thank you for signing up! We will be in touch soon.
     </p>
 
-    <div class="padding-bottom">
-      <p class="bold">
-        Introducing <span class="gold">Drivers Club</span>
+    <div id="ad-content">
+      <p class="bold padding-bottom">
+        Tired of wasting time and money at the ports?
       </p>
-      <div class="icon-and-text">
-        <i class="fas fa-check green"></i>
-        <p>Save time and money</p>
-      </div>
-      <div class="icon-and-text">
-        <i class="fas fa-check green"></i>
-        <p>Anticipate port congestion</p>
-      </div>
-      <div class="icon-and-text">
-        <i class="fas fa-check green"></i>
-        <p>Reduce stress, frustration, and confusion</p>
-      </div>
-    </div>
-
-    <p class="padding-bottom">
-      Drivers Club includes...
-    </p>
-
-    <div class="padding-bottom">
-      <p class="bold">
-        <span class="gold">Vital port alerts</span> pushed directly to your phone
+      <p class="bold padding-bottom">
+        It's time to make a change... together.
       </p>
-      <div class="icon-and-text">
-        <i class="fas fa-times"></i>
-        <p>System outages</p>
+  
+      <div class="padding-bottom">
+        <p class="bold">
+          Introducing <span class="gold">Drivers Club</span>
+        </p>
+        <div class="icon-and-text">
+          <i class="fas fa-check green"></i>
+          <p>Save time and money</p>
+        </div>
+        <div class="icon-and-text">
+          <i class="fas fa-check green"></i>
+          <p>Anticipate port congestion</p>
+        </div>
+        <div class="icon-and-text">
+          <i class="fas fa-check green"></i>
+          <p>Reduce stress, frustration, and confusion</p>
+        </div>
       </div>
-      <div class="icon-and-text">
-        <i class="fas fa-times"></i>
-        <p>Terminal stopped accepting empties</p>
-      </div>
-      <div class="icon-and-text">
-        <i class="fas fa-times"></i>
-        <p>Last minute gate schedule changes</p>
-      </div>
-      <div class="icon-and-text">
-        <i class="fas fa-times"></i>
-        <p>Crane lane is not moving</p>
-      </div>
-    </div>
-
-    <div class="padding-bottom">
-      <p class="bold">
-        <span class="gold">A private community</span> for drivers like you
+  
+      <p class="padding-bottom">
+        Drivers Club includes...
       </p>
-      <div class="icon-and-text">
-        <i class="fas fa-times"></i>
-        <p>Share tips and tricks</p>
+  
+      <div class="padding-bottom">
+        <p class="bold">
+          <span class="gold">Vital port alerts</span> pushed directly to your phone
+        </p>
+        <div class="icon-and-text">
+          <i class="fas fa-times"></i>
+          <p>System outages</p>
+        </div>
+        <div class="icon-and-text">
+          <i class="fas fa-times"></i>
+          <p>Terminal stopped accepting empties</p>
+        </div>
+        <div class="icon-and-text">
+          <i class="fas fa-times"></i>
+          <p>Last minute gate schedule changes</p>
+        </div>
+        <div class="icon-and-text">
+          <i class="fas fa-times"></i>
+          <p>Crane lane is not moving</p>
+        </div>
       </div>
-      <div class="icon-and-text">
-        <i class="fas fa-times"></i>
-        <p>Get help finding the right company for you</p>
+  
+      <div class="padding-bottom">
+        <p class="bold">
+          <span class="gold">A private community</span> for drivers like you
+        </p>
+        <div class="icon-and-text">
+          <i class="fas fa-times"></i>
+          <p>Share tips and tricks</p>
+        </div>
+        <div class="icon-and-text">
+          <i class="fas fa-times"></i>
+          <p>Get help finding the right company for you</p>
+        </div>
+        <div class="icon-and-text">
+          <i class="fas fa-times"></i>
+          <p>Learn how to handle various transaction</p>
+        </div>
       </div>
-      <div class="icon-and-text">
-        <i class="fas fa-times"></i>
-        <p>Learn how to handle various transaction</p>
+      
+      <div class="padding-bottom">
+        <p class="bold gold">
+          Exclusive in-app features
+        </p>
+        <div class="icon-and-text">
+          <i class="fas fa-times"></i>
+          <p>Empty return information</p>
+        </div>
+        <div class="icon-and-text">
+          <i class="fas fa-times"></i>
+          <p>Gate schedules</p>
+        </div>
+        <div class="icon-and-text">
+          <i class="fas fa-times"></i>
+          <p>No more ads</p>
+        </div>
       </div>
-    </div>
-    
-    <div class="padding-bottom">
-      <p class="bold gold">
-        Exclusive in-app features
+  
+      <p class="bold padding-bottom">
+        Over <span class="red">$200 in value</span>, yours for <span class="green">only $19.95</span> for a <span class="underline">limited time</span>.
       </p>
-      <div class="icon-and-text">
-        <i class="fas fa-times"></i>
-        <p>Empty return information</p>
-      </div>
-      <div class="icon-and-text">
-        <i class="fas fa-times"></i>
-        <p>Gate schedules</p>
-      </div>
-      <div class="icon-and-text">
-        <i class="fas fa-times"></i>
-        <p>No more ads</p>
-      </div>
+  
+      <p class="bold padding-bottom">
+        Drivers Club is launching soon!
+      </p>
+  
+      <p>
+        <span class="bold">Join the waitlist today to receive updates!</span> No credit card required.
+      </p>
+  
+      <input class="input" type="text" placeholder="First Name">
+      <input class="input" type="email" placeholder="Email Address">
+  
+      <button class="button" onclick="onSignUp()">
+        Join the Waitlist
+      </button>
     </div>
-
-    <p class="bold padding-bottom">
-      Over <span class="red">$200 in value</span>, yours for <span class="green">only $19.95</span> for a <span class="underline">limited time</span>.
-    </p>
-
-    <p class="bold padding-bottom">
-      Drivers Club is launching soon!
-    </p>
-
-    <p>
-      <span class="bold">Join the waitlist today to receive updates!</span> No credit card required.
-    </p>
-
-    <input class="input" type="text" placeholder="First Name">
-    <input class="input" type="email" placeholder="Email Address">
-
-    <button class="button" onclick="alert('Hello world!')">
-      Join the Waitlist
-    </button>
   </div>
 </body>
 </html>
