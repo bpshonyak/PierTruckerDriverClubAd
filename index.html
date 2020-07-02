@@ -80,6 +80,11 @@
   </style>
   <script>
     function onSignUp() {
+      var firstName = document.getElementById('first-name').value
+      var email = document.getElementById('email').value
+
+      gtag('event', 'signup', { firstName: firstName, email: email });
+
       var confirmation = document.getElementById('confirmation')
       var adContent = document.getElementById('ad-content')
 
@@ -194,8 +199,8 @@
         <span class="bold">Join the waitlist today to receive updates!</span> No credit card required.
       </p>
   
-      <input class="input" type="text" placeholder="First Name">
-      <input class="input" type="email" placeholder="Email Address">
+      <input id="first-name" class="input" type="text" placeholder="First Name">
+      <input id="email" class="input" type="email" placeholder="Email Address">
   
       <button class="button" onclick="onSignUp()">
         Join the Waitlist
