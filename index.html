@@ -33,6 +33,25 @@
       max-width: 500px;
       margin: 0 auto;
     }
+    .input {
+      font-size: 20px;
+      border-radius: 3px;
+      padding: 5px;
+      border: 2px solid #FDD714;
+      width: 100%;
+      box-sizing: border-box;
+      margin-bottom: 20px;
+    }
+    .button {
+      font-size: 20px;
+      background-color: #FDD714;
+      border: none;
+      border-radius: 3px;
+      padding: 5px;
+      width: 100%;
+      box-sizing: border-box;
+      margin-bottom: 60px;
+    }
   </style>
 </head>
 <body>
@@ -128,10 +147,10 @@
       <span class="bold">Join the waitlist today to receive updates!</span> No credit card required.
     </p>
 
-    <input type="text" placeholder="First Name">
-    <input type="email" placeholder="Email Address">
+    <input class="input" type="text" placeholder="First Name">
+    <input class="input" type="email" placeholder="Email Address">
 
-    <button onclick="alert('Hello world!')">
+    <button class="button" onclick="alert('Hello world!')">
       Join the Waitlist
     </button>
   </div>
