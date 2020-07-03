@@ -108,7 +108,7 @@
       var firstName = document.getElementById('first-name').value
       var email = document.getElementById('email').value
 
-      gtag('event', 'signup', { firstName: firstName, email: email });
+      firebase.analytics().logEvent('signup', { firstName: firstName, email: email });
 
       var confirmation = document.getElementById('confirmation')
       var adContent = document.getElementById('ad-content')
