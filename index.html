@@ -7,6 +7,31 @@
   <script src="https://kit.fontawesome.com/e67df9f731.js" crossorigin="anonymous"></script>
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-171515444-1"></script>
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+      https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-analytics.js"></script>
+
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyAlGh5qaxFhf3OA4qUGMLDcdtH00E48qCU",
+      authDomain: "driver-club-ad-website.firebaseapp.com",
+      databaseURL: "https://driver-club-ad-website.firebaseio.com",
+      projectId: "driver-club-ad-website",
+      storageBucket: "driver-club-ad-website.appspot.com",
+      messagingSenderId: "843996635992",
+      appId: "1:843996635992:web:feb942429e99762a0cfb2d",
+      measurementId: "G-KCDNPMYCX6"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+  </script>
+
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
