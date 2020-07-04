@@ -69,9 +69,18 @@
     #confirmation {
       display: none;
     }
+    #loading-spinner {
+      display: none;
+      text-align: center;
+    }
   </style>
   <script>
     function onSignUp() {
+      var loadingSpinner = document.getElementById('loading-spinner')
+      var adContent = document.getElementById('ad-content')
+      adContent.style.display="none"
+      loadingSpinner.style.display="initial"
+
       var firstName = document.getElementById('first-name').value
       var email = document.getElementById('email').value
 
@@ -95,10 +104,9 @@
         .then(result => {
           console.log(result)
           var confirmation = document.getElementById('confirmation')
-          var adContent = document.getElementById('ad-content')
-
+          
           confirmation.style.display="initial"
-          adContent.style.display="none"
+          loadingSpinner.style.display="none"
         })
         .catch(error => console.log('error', error));
     }
@@ -106,6 +114,10 @@
 </head>
 <body>
   <div class="content-container">
+    <p id="loading-spinner">
+      <i class="fa fa-spinner fa-spin" style="font-size:42px; display: block;"></i>
+    </p>
+
     <p id="confirmation" class="bold padding-bottom">
       Thank you for signing up! We will be in touch soon.
     </p>
