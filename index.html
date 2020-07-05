@@ -84,14 +84,10 @@
       var firstName = document.getElementById('first-name').value
       var email = document.getElementById('email').value
 
-      var data = new FormData()
-      data.append('name', firstName)
-      data.append('email', email)
-
       var myHeaders = new Headers();
       myHeaders.append("Content-Type", "application/json");
 
-      var raw = JSON.stringify({"name": name,"email": email});
+      var raw = JSON.stringify({"name": firstName,"email": email});
 
       var requestOptions = {
         method: 'POST',
