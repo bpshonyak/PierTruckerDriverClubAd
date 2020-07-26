@@ -34,6 +34,9 @@
     .underline {
       text-decoration: underline;
     }
+    .strike-through {
+      text-decoration: line-through;
+    }
     .gold {
       color: #FDD714;
     }
@@ -42,6 +45,9 @@
     }
     .red {
       color: #ff0000;
+    }
+    .white {
+      color: #fff;
     }
     .content-container {
       max-width: 500px;
@@ -74,39 +80,6 @@
       text-align: center;
     }
   </style>
-  <script>
-    function onSignUp() {
-      var loadingSpinner = document.getElementById('loading-spinner')
-      var adContent = document.getElementById('ad-content')
-      adContent.style.display="none"
-      loadingSpinner.style.display="initial"
-
-      var firstName = document.getElementById('first-name').value
-      var email = document.getElementById('email').value
-
-      var myHeaders = new Headers();
-      myHeaders.append("Content-Type", "application/json");
-
-      var raw = JSON.stringify({"name": firstName,"email": email});
-
-      var requestOptions = {
-        method: 'POST',
-        headers: myHeaders,
-        body: raw,
-      };
-
-      fetch("https://l0vdf0921k.execute-api.us-west-2.amazonaws.com/dev/signup", requestOptions)
-        .then(response => response.text())
-        .then(result => {
-          console.log(result)
-          var confirmation = document.getElementById('confirmation')
-          
-          confirmation.style.display="initial"
-          loadingSpinner.style.display="none"
-        })
-        .catch(error => console.log('error', error));
-    }
-  </script>
 </head>
 <body>
   <div class="content-container">
@@ -205,25 +178,28 @@
           <p>No more ads</p>
         </div>
       </div>
-  
+
       <p class="bold padding-bottom">
-        Over <span class="red">$200 in value</span>, yours for <span class="green">only $19.95</span> for a <span class="underline">limited time</span>.
+        Over <span class="red">$200 in value</span>!
       </p>
-  
+
       <p class="bold padding-bottom">
-        Drivers Club is launching soon!
+        Sign up today <span class="green">for free</span> and <span class="green underline">only pay $7.95/mo</span> when Drivers Club launches!
       </p>
-  
-      <p>
-        <span class="bold">Join the waitlist today to receive updates!</span> No credit card required.
+
+      <p class="bold padding-bottom">
+        We are <span class="gold">only accepting 50 drivers</span> at this special discount price!
       </p>
-  
-      <input id="first-name" class="input" type="text" placeholder="First Name">
-      <input id="email" class="input" type="email" placeholder="Email Address">
-  
-      <button class="button" onclick="onSignUp()">
-        Join the Waitlist
-      </button>
+
+      <p class="bold padding-bottom">
+        Drivers Club launches in <span class="gold">less than 2 months</span>! Sign up today before discount spots run out!
+      </p>
+
+      <p class="bold padding-bottom">
+        Please email any questions to info@piertrucker.com
+      </p>
+
+      <div data-thrivecart-account="piertrucker" data-thrivecart-tpl="v2" data-thrivecart-product="1" class="thrivecart-embeddable" data-thrivecart-embeddable="tc-piertrucker-1-41YIYN"></div><script async src="https://thrivecart.com/embed/v1/thrivecart.js" id="tc-piertrucker-1-41YIYN"></script>
     </div>
   </div>
 </body>
