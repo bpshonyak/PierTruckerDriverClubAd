@@ -6,6 +6,9 @@
   <title>Drivers Club</title>
   <script src="https://kit.fontawesome.com/e67df9f731.js" crossorigin="anonymous"></script>
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
     body {
       background-color: #fff;
       color: #000;
@@ -66,6 +69,13 @@
       max-width: 500px;
       margin: 0 auto;
       padding: 25px;
+    }
+    #sign-up {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #ff0000;
+      color: white;
     }
   </style>
 </head>
@@ -248,6 +258,12 @@
         Sign up today <span class="green">for free</span> and <span class="green underline">only pay $7.95/mo</span> when Drivers Club launches!
       </p>
 
+      <a class="padding-bottom" style="text-decoration: none; display: block;" href="#cart">
+        <div id="sign-up">
+          <p>Sign up now!</p>
+        </div>
+      </a>
+
       <p class="bold padding-bottom">
         We are <span class="accent underline">only accepting 50 drivers</span> at this special discount price!
       </p>
@@ -259,8 +275,22 @@
       <p class="bold padding-bottom">
         Please email any questions to info@piertrucker.com
       </p>
+
+      <img src="look_here.png" style="width: 100%;" /> 
     </div>
   </div>
-  <div data-thrivecart-account="piertrucker" data-thrivecart-tpl="v2" data-thrivecart-product="1" class="thrivecart-embeddable" data-thrivecart-embeddable="tc-piertrucker-1-41YIYN"></div><script async src="https://thrivecart.com/embed/v1/thrivecart.js" id="tc-piertrucker-1-41YIYN"></script>
+  <div id="cart" data-thrivecart-account="piertrucker" data-thrivecart-tpl="v2" data-thrivecart-product="1" class="thrivecart-embeddable" data-thrivecart-embeddable="tc-piertrucker-1-41YIYN"></div><script async src="https://thrivecart.com/embed/v1/thrivecart.js" id="tc-piertrucker-1-41YIYN"></script>
+  <div class="content-container">
+    <img src="look_here2.png" style="width: 100%;" />
+    <p style="margin-top: 65px;" class="header2 padding-bottom">
+      What people are saying
+    </p>
+
+    <img style="padding-bottom: 20px;" src="iOS_review_1.png" style="width: 100%;" />
+
+    <img style="padding-bottom: 20px;" src="iOS_review_2.png" style="width: 100%;" />
+
+    <img style="padding-bottom: 20px;" src="iOS_review_3.png" style="width: 100%;" />
+  </div>
 </body>
 </html>
