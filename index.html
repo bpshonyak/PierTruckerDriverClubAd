@@ -57,7 +57,10 @@
       text-decoration: underline;
     }
     .strike-through {
-      text-decoration: line-through;
+      text-decoration-line: line-through;
+      text-decoration-style: solid;
+      text-decoration-color: currentcolor;
+      text-decoration-thickness: 3px;
     }
     .center {
       text-align: center;
@@ -162,7 +165,7 @@
       </div>
 
       <p class="bold">
-        Total value: <span class="red strike-through">$226/mo</span>!
+        Total value: <span style="color: #e66e6e;" class="strike-through">$226/mo</span>!
       </p>
 
       <p class="bold padding-bottom">
