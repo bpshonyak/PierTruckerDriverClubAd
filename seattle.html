@@ -1,10 +1,10 @@
-<!-- minimal paid -->
+<!-- minimal free no pricing no in-app features -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Drivers Club</title>
+  <title>Drivers Club Seattle</title>
   <script src="https://kit.fontawesome.com/e67df9f731.js" crossorigin="anonymous"></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-171515444-1"></script>
   <script>
@@ -58,7 +58,10 @@
       text-decoration: underline;
     }
     .strike-through {
-      text-decoration: line-through;
+      text-decoration-line: line-through;
+      text-decoration-style: solid;
+      text-decoration-color: currentcolor;
+      text-decoration-thickness: 3px;
     }
     .center {
       text-align: center;
@@ -87,10 +90,68 @@
       background: #ff0000;
       color: white;
     }
+    .input {
+      font-size: 25px;
+      border-radius: 3px;
+      padding: 10px;
+      border: 2px solid #575757;
+      width: 100%;
+      box-sizing: border-box;
+      margin-bottom: 20px;
+    }
+    .button {
+      font-size: 25px;
+      background: #ff0000;
+      color: white;
+      border: none;
+      border-radius: 3px;
+      padding: 10px 5px;
+      width: 100%;
+      box-sizing: border-box;
+      margin-bottom: 50px;
+    }
+    #confirmation {
+      display: none;
+    }
   </style>
+  <script>
+    function onSignUp() {
+      var name = document.getElementById('first-name').value
+      var email = document.getElementById('email').value
+      var phone = document.getElementById('phone').value
+
+      var myHeaders = new Headers();
+      myHeaders.append("Content-Type", "application/json");
+
+      var raw = JSON.stringify({"name": name,"email": email, "phone": phone, location: "Seattle"});
+
+      var requestOptions = {
+        method: 'POST',
+        headers: myHeaders,
+        body: raw,
+      };
+
+      var confirmation = document.getElementById('confirmation')
+      var adContent = document.getElementById('ad-content')
+      fetch("https://l0vdf0921k.execute-api.us-west-2.amazonaws.com/dev/signup", requestOptions)
+        .then(response => response.text())
+        .then(result => {
+          console.log(result)
+          var confirmation = document.getElementById('confirmation')
+          var adContent = document.getElementById('ad-content')
+
+          confirmation.style.display="initial"
+          adContent.style.display="none"
+        })
+        .catch(error => console.log('error', error));
+    }
+  </script>
 </head>
 <body>
   <div class="content-container">
+    <p id="confirmation" class="bold header2 padding-bottom">
+      Thank you for signing up! We will be in touch soon.
+    </p>
     <div id="ad-content">
       <p class="header2 padding-bottom">
         Introducing <span class="accent">Drivers Club</span>
@@ -121,7 +182,6 @@
           <i class="fas fa-check green"></i>
           <p>Crane lane not moving</p>
         </div>
-        <p class="">(Valued at: <span class="red">$118</span>)</p>
       </div>
   
       <div class="padding-bottom">
@@ -140,10 +200,9 @@
           <i class="fas fa-check green"></i>
           <p>Stay up to date with relevant port news</p>
         </div>
-        <p class="">(Valued at: <span class="red">$78</span>)</p>
       </div>
       
-      <div class="padding-bottom">
+      <!-- <div class="padding-bottom">
         <p class="bold accent">
           Premium in-app features
         </p>
@@ -159,50 +218,31 @@
           <i class="fas fa-check green"></i>
           <p>No more ads</p>
         </div>
-        <p class="">(Valued at: <span class="red">$27</span>)</p>
-      </div>
+      </div> -->
 
-      <p class="bold">
-        Total value: <span class="red strike-through">$226/mo</span>!
+      <p class="bold padding-bottom">
+        Sign up today <span class="underline green">for free</span>!
       </p>
 
       <p class="bold padding-bottom">
-        Sign up today <span class="green">for free</span> and <span class="green underline">only pay $7.95/mo</span> when Drivers Club launches!
-      </p>
-
-      <a class="padding-bottom" style="text-decoration: none; display: block;" href="#cart">
-        <div id="sign-up">
-          <p>Sign up now!</p>
-        </div>
-      </a>
-
-      <p class="bold padding-bottom">
-        We are <span class="accent underline">only accepting 50 drivers</span> at this special discount price!
-      </p>
-
-      <p class="bold padding-bottom">
-        Drivers Club launches in <span class="accent">less than 2 months</span>! Sign up today before discount spots run out!
+        We are <span class="accent underline">only accepting 50 drivers</span>!
       </p>
 
       <p class="bold padding-bottom">
         Please email any questions to info@piertrucker.com
       </p>
 
-      <img src="look_here.png" style="width: 100%;" /> 
+      <div id="cart" style="margin-top: 40px;">
+        <input id="first-name" class="input" type="text" placeholder="First Name">
+        <input id="email" class="input" type="email" placeholder="Email Address">
+        <input id="phone" class="input" type="tel" placeholder="Phone Number">
+    
+        <button class="button" onclick="onSignUp()">
+          Sign me up!
+        </button>
+      </div>
+
     </div>
-  </div>
-  <div id="cart" data-thrivecart-account="piertrucker" data-thrivecart-tpl="v2" data-thrivecart-product="1" class="thrivecart-embeddable" data-thrivecart-embeddable="tc-piertrucker-1-41YIYN"></div><script async src="https://thrivecart.com/embed/v1/thrivecart.js" id="tc-piertrucker-1-41YIYN"></script>
-  <div class="content-container">
-    <img src="look_here2.png" style="width: 100%;" />
-    <p style="margin-top: 65px;" class="header2 padding-bottom">
-      What people are saying
-    </p>
-
-    <img style="padding-bottom: 20px;" src="iOS_review_1.png" style="width: 100%;" />
-
-    <img style="padding-bottom: 20px;" src="iOS_review_2.png" style="width: 100%;" />
-
-    <img style="padding-bottom: 20px;" src="iOS_review_3.png" style="width: 100%;" />
   </div>
 </body>
 </html>
