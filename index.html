@@ -128,6 +128,7 @@
       var company = document.getElementById('company').value
       var company_email = document.getElementById('company_email').value
       var company_website = document.getElementById('company_website').value
+      var location = document.getElementById('location').value
 
       var job_description = document.getElementById('job_description').value
 
@@ -143,6 +144,7 @@
         company,
         company_email,
         company_website,
+        location,
         job_description,
         contact_phone,
         contact_email,
@@ -201,7 +203,13 @@
         <input id="company" class="input" type="text" placeholder="Company Name">
         <input id="company_email" class="input" type="email" placeholder="Company Email Address">
         <input id="company_website" class="input" type="text" placeholder="Company Website (Optional)">
-
+        <select id="location" class="input">
+          <option value="Location">Location</option>
+          <option value="California">California</option>
+          <option value="Washington">Washington</option>
+          <option value="NY/NJ">New York / New Jersey</option>
+          <option value="Other">Other</option>
+        </select>
         <h2>Job Post (<a href="https://piertrucker.com/LA/Jobs" target="_blank">Examples</a>)</h2>
         <textarea id="job_description" maxlength="300" rows="5" class="input" placeholder="Job post description"></textarea>
 
