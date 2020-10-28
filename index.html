@@ -23,12 +23,15 @@
       margin-bottom: 35px;
     }
     a {
-      color: #d7d7d7;
-      font-size: 12px;
+      /* color: #d7d7d7; */
+      /* font-size: 12px; */
     }
     #ad-content i {
       margin-right: 10px;
       font-size: 25px !important;
+    }
+    h1, h2 {
+      font-family: arial;
     }
     p, i {
       font-size: 22px;
@@ -121,14 +124,32 @@
   </style>
   <script>
     function onSignUp() {
-      var name = document.getElementById('first-name').value
-      var email = document.getElementById('email').value
+      var name = document.getElementById('name').value
       var company = document.getElementById('company').value
+      var company_email = document.getElementById('company_email').value
+      var company_website = document.getElementById('company_website').value
+
+      var job_description = document.getElementById('job_description').value
+
+      var contact_phone = document.getElementById('contact_phone').value
+      var contact_email = document.getElementById('contact_email').value
+      var contact_website = document.getElementById('contact_website').value
 
       var myHeaders = new Headers();
       myHeaders.append("Content-Type", "application/json");
 
-      var raw = JSON.stringify({"name": name,"email": email, "company": company});
+      var raw = JSON.stringify({
+        name,
+        company,
+        company_email,
+        company_website,
+        job_description,
+        contact_phone,
+        contact_email,
+        contact_website
+      });
+
+      console.log(raw);
 
       var requestOptions = {
         method: 'POST',
@@ -175,9 +196,19 @@
       </p>
 
       <div id="cart" style="margin-top: 40px;">
-        <input id="first-name" class="input" type="text" placeholder="First Name">
+        <h2>Company Information</h2>
+        <input id="name" class="input" type="text" placeholder="Name">
         <input id="company" class="input" type="text" placeholder="Company Name">
-        <input id="email" class="input" type="email" placeholder="Company Email Address">
+        <input id="company_email" class="input" type="email" placeholder="Company Email Address">
+        <input id="company_website" class="input" type="text" placeholder="Company Website (Optional)">
+
+        <h2>Job Post (<a href="https://piertrucker.com/LA/Jobs" target="_blank">Examples</a>)</h2>
+        <textarea id="job_description" maxlength="300" rows="5" class="input" placeholder="Job post description"></textarea>
+
+        <p>Note: This is how drivers will contact you. Multiple contact methods are allowed.</p>
+        <input id="contact_phone" class="input" type="tel" placeholder="Contact Phone Number">
+        <input id="contact_email" class="input" type="email" placeholder="Contact Email Address">
+        <input id="contact_website" class="input" type="text" placeholder="Contact Website">
     
         <button class="button" onclick="onSignUp()">
           Get Started!
